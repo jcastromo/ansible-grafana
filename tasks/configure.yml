@@ -77,8 +77,6 @@
     - grafana_cap_net_bind_service
 
 - name: Enable and start Grafana systemd unit
-  systemd:
+  service:
     name: grafana-server
-    enabled: true
     state: started
-    daemon_reload: true
